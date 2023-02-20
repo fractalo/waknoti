@@ -12,8 +12,8 @@
 <br>
 
 <p>
-    <a class="btn" href="https://t.me/waknoti" target="_blank" rel="noopener noreferrer">방송 알림 채널</a>
-    <a class="btn" href="https://t.me/waknoti_chat" target="_blank" rel="noopener noreferrer">채팅 알림 채널</a>
+    <a class="btn " href="https://t.me/waknoti" target="_blank" rel="noopener noreferrer">방송 알림 채널</a>
+    <a class="btn " href="https://t.me/waknoti_chat" target="_blank" rel="noopener noreferrer">채팅 알림 채널</a>
 </p>
 
 

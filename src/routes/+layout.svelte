@@ -1,6 +1,6 @@
 <script lang="ts">
     import "../app.css";
-    import LogoIcon from '../lib/icons/logo.svelte';
+    import LogoIcon from '../lib/icons/logoWithText.svelte';
     import SunIcon from '../lib/icons/sun.svelte';
     import MoonIcon from '../lib/icons/moon.svelte';
 
@@ -40,10 +40,12 @@
 
 
 <div class="navbar bg-base-100">
-    <div class="navbar-start m-1">
-        <LogoIcon class="h-10 w-10 "/>
+    <div class="navbar-start m-1 ml-2">
+        <a href="/">
+            <LogoIcon class="fill-accent-content h-10"/>
+        </a>
     </div>
-    <div class="navbar-end m-1">
+    <div class="navbar-end m-1 mr-2">
         <label class="swap swap-rotate">
             <input 
                 type="checkbox" 
