@@ -38,26 +38,29 @@
 
 </script>
 
-
-<div class="navbar bg-base-100">
-    <div class="navbar-start m-1 ml-2">
-        <a href="/">
-            <LogoIcon class="fill-accent-content h-10"/>
-        </a>
+<div class="container max-w-screen-lg mx-auto">
+    <div class="navbar bg-base-100">
+        <div class="navbar-start m-1 ml-2">
+            <a href="/">
+                <LogoIcon class="fill-accent-content h-10"/>
+            </a>
+        </div>
+        <div class="navbar-end m-1 mr-2">
+            <label class="swap swap-rotate">
+                <input 
+                    type="checkbox" 
+                    data-toggle-theme="light,dark" 
+                    data-act-class="ACTIVECLASS" 
+                    checked={theme === 'dark'} 
+                    disabled={!theme}
+                />
+                <SunIcon class="swap-off fill-current w-6 h-6" />
+                <MoonIcon class="swap-on fill-current w-6 h-6" />
+            </label>
+        </div>
     </div>
-    <div class="navbar-end m-1 mr-2">
-        <label class="swap swap-rotate">
-            <input 
-                type="checkbox" 
-                data-toggle-theme="light,dark" 
-                data-act-class="ACTIVECLASS" 
-                checked={theme === 'dark'} 
-                disabled={!theme}
-            />
-            <SunIcon class="swap-off fill-current w-6 h-6" />
-            <MoonIcon class="swap-on fill-current w-6 h-6" />
-        </label>
-    </div>
+      
+    <slot />
 </div>
-  
-<slot />
+
+
