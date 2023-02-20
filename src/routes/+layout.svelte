@@ -39,7 +39,7 @@
 </script>
 
 <div class="container max-w-screen-lg mx-auto">
-    <div class="navbar bg-base-100">
+    <div class="navbar bg-base-100 sticky top-0 z-30">
         <div class="navbar-start m-1 ml-2">
             <a href="/">
                 <LogoIcon class="fill-accent-content h-10"/>
