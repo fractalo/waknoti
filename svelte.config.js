@@ -8,20 +8,7 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter(),
-		prerender: {
-			entries: [
-				"*", 
-				"/channels/common",
-				"/channels/ine",
-				"/channels/jingburger",
-				"/channels/lilpa",
-				"/channels/jururu",
-				"/channels/gosegu",
-				"/channels/viichan",
-				"/channels/woowakgood",
-			]
-		}
+		adapter: adapter()
 	}
 };
 
