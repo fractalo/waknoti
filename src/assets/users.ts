@@ -6,7 +6,7 @@ export interface User {
 
 export const users: User[] = [
     {
-        id: "isedol",
+        id: "common",
         name: "공통",
         isGroup: true
     },

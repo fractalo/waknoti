@@ -1,6 +1,6 @@
 import type { TelegramChannel } from './types';
 
-import {channels as isedolChannels} from './isedol';
+import {channels as commonChannels} from './common';
 import {channels as ineChannels} from './ine';
 import {channels as jingburgerChannels} from './jingburger';
 import {channels as lilpaChannels} from './lilpa';
@@ -12,7 +12,7 @@ import {channels as woowakgoodChannels} from './woowakgood';
 
 const telegramChannelLists = new Map<string, TelegramChannel[]>();
 
-telegramChannelLists.set('isedol', isedolChannels);
+telegramChannelLists.set('common', commonChannels);
 telegramChannelLists.set('ine', ineChannels);
 telegramChannelLists.set('jingburger', jingburgerChannels);
 telegramChannelLists.set('lilpa', lilpaChannels);
