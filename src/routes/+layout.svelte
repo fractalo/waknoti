@@ -4,6 +4,7 @@
     import QuestionMarkIcon from '../lib/icons/questionMark.svelte';
     import MegaphoneIcon from "../lib/icons/megaphone.svelte";
     import ThemeSwitcher from "../lib/themeSwitcher.svelte";
+    import GithubIcon from '../lib/icons/github.svelte';
     import { page } from "$app/stores";
 
     
@@ -11,7 +12,7 @@
 </script>
 
 
-<div class="max-w-screen-lg mx-auto sm:px-6">
+<div class="max-w-screen-lg mx-auto sm:px-6 min-h-screen">
     <div class=" top-0 z-40 navbar bg-base-100 px-4 sm:px-0">
         <div class="navbar-start">
             <a href="/" class="btn btn-ghost px-3">
@@ -35,6 +36,16 @@
     <slot />
 </div>
 
+<footer class="footer footer-center p-6 bg-base-300 text-base-content">
+    <div>
+        <a class="link link-hover flex gap-1" href="https://github.com/fractalo/waknoti" target="_blank" rel="noopener noreferrer">
+            <GithubIcon class="w-5 h-5" /> WakNoti
+        </a>
+        <a class="link link-hover flex gap-1" href="https://github.com/fractalo/twitch-notifier" target="_blank" rel="noopener noreferrer">
+            <GithubIcon class="w-5 h-5" /> 트위치 알림 봇
+        </a>
+    </div>
+</footer>
 
 
 

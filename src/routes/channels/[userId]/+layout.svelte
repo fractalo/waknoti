@@ -26,7 +26,7 @@
         </ul>
     </aside>
 
-    <main class="w-full py-2 px-1 pr-2 pb-20 sm:pb-10 md:pl-5">
+    <main class="w-full py-2 px-1 pr-2 pb-10 md:pl-5">
         <slot />
     </main>
 </div>
