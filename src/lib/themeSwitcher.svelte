@@ -35,7 +35,7 @@
 
 </script>
 
-<label class="swap swap-rotate">
+<label class="swap swap-rotate btn btn-square btn-ghost">
     <input 
         type="checkbox" 
         data-toggle-theme="light,dark" 

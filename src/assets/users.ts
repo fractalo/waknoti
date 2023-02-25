@@ -11,6 +11,11 @@ export const users: User[] = [
         isGroup: true
     },
     {
+        id: "woowakgood",
+        name: "우왁굳",
+        isGroup: false
+    },
+    {
         id: "ine",
         name: "아이네",
         isGroup: false
@@ -38,11 +43,6 @@ export const users: User[] = [
     {
         id: "viichan",
         name: "비챤",
-        isGroup: false
-    },
-    {
-        id: "woowakgood",
-        name: "우왁굳",
         isGroup: false
     }
 ];
