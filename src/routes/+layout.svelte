@@ -5,6 +5,7 @@
     import MegaphoneIcon from "../lib/icons/megaphone.svelte";
     import ThemeSwitcher from "../lib/themeSwitcher.svelte";
     import GithubIcon from '../lib/icons/github.svelte';
+    import NaverCafeIcon from '../lib/icons/naverCafe.svelte';
     import { page } from "$app/stores";
 
     
@@ -38,6 +39,9 @@
 
 <footer class="footer footer-center p-6 bg-base-300 text-base-content">
     <div>
+        <a class="link link-hover flex gap-1" href="https://cafe.naver.com/steamindiegame" target="_blank" rel="noopener noreferrer">
+            <NaverCafeIcon class="w-5 h-5" /> 왁물원
+        </a>
         <a class="link link-hover flex gap-1" href="https://github.com/fractalo/waknoti" target="_blank" rel="noopener noreferrer">
             <GithubIcon class="w-5 h-5" /> WakNoti
         </a>
