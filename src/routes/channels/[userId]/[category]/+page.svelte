@@ -66,7 +66,7 @@
                     <GlobeIcon class="w-5 h-5 mr-1" />미리보기
                 </a>
                 {/if}
-                <a class="btn btn-primary min-h-0 h-10 " href={getDirectLink(channel)} target="_blank" rel="noopener noreferrer">
+                <a class="btn btn-primary min-h-0 h-10 " href={getDirectLink(channel)}>
                     <TelegramIcon class="w-5 h-5 mr-1" />열기
                 </a>
             </div>
