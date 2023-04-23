@@ -14,12 +14,12 @@
     <aside class="flex-none z-30 sticky top-[2rem] sm:block sm:w-40 md:w-48 max-h-[calc(100vh-4rem)] overflow-y-auto touch-manipulation">
         <ul class="menu bg-base-100 p-2 ">
         {#each users as user (user.id)}
-            <li class="">
+            <li>
                 <a href="/channels/{user.id}" class="{data.currentUser.id === user.id ? 'active' : ''}" >
-                    <div class="mask mask-circle w-9">
+                    <div class="mask mask-circle w-9 md:w-11">
                         <img src="/img/profiles/user/{user.id}.png" alt={user.id} />
                     </div>
-                    <span class="hidden sm:inline-block" >{user.name}</span>
+                    <span class="md:text-lg font-semibold hidden sm:inline-block" >{user.name}</span>
                 </a>
             </li>
         {/each}

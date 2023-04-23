@@ -40,7 +40,7 @@
       </div>
 </div>
 
-<div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:gap-4 ">
+<div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:gap-3 ">
 {#each data.channels as channel (channel.id)}
     <div class="card w-full bg-base-200 ">
         <div class="card-body p-4 sm:p-6">
