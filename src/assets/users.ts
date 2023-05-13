@@ -1,48 +1,47 @@
 export interface User {
     id: string;
     name: string;
-    isGroup: boolean;
+    twitchLoginName?: string;
 }
 
 export const users: User[] = [
     {
         id: "common",
         name: "공통",
-        isGroup: true
     },
     {
         id: "woowakgood",
         name: "우왁굳",
-        isGroup: false
+        twitchLoginName: "woowakgood",
     },
     {
         id: "ine",
         name: "아이네",
-        isGroup: false
+        twitchLoginName: "vo_ine",
     },
     {
         id: "jingburger",
         name: "징버거",
-        isGroup: false
+        twitchLoginName: "jingburger",
     },
     {
         id: "lilpa",
         name: "릴파",
-        isGroup: false
+        twitchLoginName: "lilpaaaaaa",
     },
     {
         id: "jururu",
         name: "주르르",
-        isGroup: false
+        twitchLoginName: "cotton__123",
     },
     {
         id: "gosegu",
         name: "고세구",
-        isGroup: false
+        twitchLoginName: "gosegugosegu",
     },
     {
         id: "viichan",
         name: "비챤",
-        isGroup: false
+        twitchLoginName: "viichan6",
     }
 ];

@@ -1,3 +1,5 @@
+import { KVNamespace } from '@cloudflare/workers-types';
+
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 declare global {
@@ -7,10 +9,9 @@ declare global {
 		// interface PageData {}
 		interface Platform {
 			env: {
-				COUNTER: DurableObjectNamespace;
-			};
+				TWITCH: KVNamespace;
+			}
 			context: {
-				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				waitUntil(promise: Promise<any>): void;
 			};
 			caches: CacheStorage & { default: Cache }

@@ -3,16 +3,12 @@ import type { LayoutLoad } from "./$types";
 import { telegramChannelLists } from '../../../assets/telegramChannels';
 import { users } from '../../../assets/users';
 import type { Tab } from "./types";
+import { categoryNames } from "../../../assets/categories";
 
 
-const categoryName: Record<string, string> = {
-    'all': '전체',
-    'broadcast': '방송',
-    'chat': '채팅',
-    'predictions': '토토'
-};
 
-export const load: LayoutLoad = ({params}) => {
+
+export const load = (async({ fetch, params }) => {
     const currentUser = users.find((user) => user.id === params.userId);
     const channels = telegramChannelLists.get(currentUser?.id || '');
 
@@ -25,7 +21,7 @@ export const load: LayoutLoad = ({params}) => {
 
 
     const categoryTabs: Tab[] = [];
-    validCategories.forEach(category => categoryTabs.push({ id: category, name: categoryName[category] }));
+    validCategories.forEach(category => categoryTabs.push({ id: category, name: categoryNames[category] }));
 
     const getFilteredChannels = () => {
         if (currentCategory === 'all') {
@@ -34,10 +30,15 @@ export const load: LayoutLoad = ({params}) => {
         return channels.filter(channel => channel.category === currentCategory);
     };
 
+    const profileImageUrls = await fetch(`/api/twitch/profile-images`)
+        .then(res => res.json())
+        .catch(() => ({}));
+
     return {
         currentUser,
         channels: getFilteredChannels(),
         currentCategory,
         categoryTabs,
+        profileImageUrls
     };
-};
+}) satisfies LayoutLoad;

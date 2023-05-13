@@ -26,7 +26,7 @@
                 <QuestionMarkIcon class="w-6 h-6" />
             </a>
             {:else if $page.url.pathname !== '/'}
-            <a href="/channels" class="btn btn-ghost btn-square ">
+            <a href="/channels/common/all" class="btn btn-ghost btn-square ">
                 <MegaphoneIcon class="w-6 h-6" />
             </a>
             {/if}
@@ -38,15 +38,15 @@
 </div>
 
 <footer class="footer footer-center p-6 bg-base-300 text-base-content">
-    <div>
+    <div class="flex gap-4">
         <a class="link link-hover flex gap-1" href="https://cafe.naver.com/steamindiegame" target="_blank" rel="noopener noreferrer">
             <NaverCafeIcon class="w-5 h-5" /> 왁물원
         </a>
         <a class="link link-hover flex gap-1" href="https://github.com/fractalo/waknoti" target="_blank" rel="noopener noreferrer">
-            <GithubIcon class="w-5 h-5" /> WakNoti
+            <GithubIcon class="w-5 h-5 fill-current" /> WakNoti
         </a>
         <a class="link link-hover flex gap-1" href="https://github.com/fractalo/twitch-notifier" target="_blank" rel="noopener noreferrer">
-            <GithubIcon class="w-5 h-5" /> 트위치 알림 봇
+            <GithubIcon class="w-5 h-5 fill-current" /> 트위치 알림 봇
         </a>
     </div>
 </footer>
