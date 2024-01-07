@@ -12,12 +12,12 @@ export const load = (async({ fetch, params }) => {
     const currentUser = users.find((user) => user.id === params.userId);
     const channels = telegramChannelLists.get(currentUser?.id || '');
 
-    if (!currentUser || !channels) throw error(404);
+    if (!currentUser || !channels) error(404);
 
     const validCategories = new Set<string>(['all', ...channels.map(channel => channel.category)]);
     const currentCategory = params.category || 'all';
 
-    if (!validCategories.has(currentCategory)) throw error(404);
+    if (!validCategories.has(currentCategory)) error(404);
 
 
     const categoryTabs: Tab[] = [];

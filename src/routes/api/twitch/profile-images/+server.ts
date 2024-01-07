@@ -4,7 +4,7 @@ import { error } from '@sveltejs/kit';
 
 export const GET = (async({ request, platform }) => {
     if (!platform) {
-        throw error(500);
+        error(500);
     }
 
     const cacheUrl = new URL(request.url);

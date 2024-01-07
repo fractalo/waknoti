@@ -17,7 +17,7 @@
     <div class=" top-0 z-40 navbar bg-base-100 px-4 sm:px-0">
         <div class="navbar-start">
             <a href="/" class="btn btn-ghost px-3">
-                <Logo class="fill-accent-content h-8 sm:h-10"/>
+                <Logo class="fill-base-content h-8 sm:h-10"/>
             </a>
         </div>
         <div class="navbar-end">
