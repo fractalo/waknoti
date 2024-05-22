@@ -3,7 +3,8 @@ import type { LayoutLoad } from "./$types";
 import { telegramChannelLists } from '../../../assets/telegramChannels';
 import { users } from '../../../assets/users';
 import type { Tab } from "./types";
-import { categoryNames } from "../../../assets/categories";
+import { categoryTabNames, type TelegramChannelCategoryTab } from "../../../assets/categories";
+import { includesString } from "../../../utils/typePredicates";
 
 
 
@@ -14,31 +15,28 @@ export const load = (async({ fetch, params }) => {
 
     if (!currentUser || !channels) error(404);
 
-    const validCategories = new Set<string>(['all', ...channels.map(channel => channel.category)]);
-    const currentCategory = params.category || 'all';
+    const validCategoryTabs: TelegramChannelCategoryTab[] = [
+        'all', 
+        ...new Set(channels.map(channel => channel.category))
+    ];
+    const currentCategoryTab = params.category || 'all';
 
-    if (!validCategories.has(currentCategory)) error(404);
-
+    if (!includesString(validCategoryTabs, currentCategoryTab)) error(404);
 
     const categoryTabs: Tab[] = [];
-    validCategories.forEach(category => categoryTabs.push({ id: category, name: categoryNames[category] }));
+    validCategoryTabs.forEach(categoryTab => categoryTabs.push({ id: categoryTab, name: categoryTabNames[categoryTab] }));
 
     const getFilteredChannels = () => {
-        if (currentCategory === 'all') {
+        if (currentCategoryTab === 'all') {
             return channels;
         }
-        return channels.filter(channel => channel.category === currentCategory);
+        return channels.filter(channel => channel.category === currentCategoryTab);
     };
-
-    const profileImageUrls = await fetch(`/api/twitch/profile-images`)
-        .then(res => res.json())
-        .catch(() => ({}));
 
     return {
         currentUser,
         channels: getFilteredChannels(),
-        currentCategory,
+        currentCategoryTab,
         categoryTabs,
-        profileImageUrls
     };
 }) satisfies LayoutLoad;

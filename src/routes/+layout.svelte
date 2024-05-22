@@ -43,10 +43,10 @@
             <NaverCafeIcon class="w-5 h-5" /> 왁물원
         </a>
         <a class="link link-hover flex gap-1" href="https://github.com/fractalo/waknoti" target="_blank" rel="noopener noreferrer">
-            <GithubIcon class="w-5 h-5 fill-current" /> WakNoti
+            <GithubIcon class="w-5 h-5 fill-current" /> waknoti
         </a>
-        <a class="link link-hover flex gap-1" href="https://github.com/fractalo/twitch-notifier" target="_blank" rel="noopener noreferrer">
-            <GithubIcon class="w-5 h-5 fill-current" /> 트위치 알림 봇
+        <a class="link link-hover flex gap-1" href="https://github.com/fractalo/waknoti-bot" target="_blank" rel="noopener noreferrer">
+            <GithubIcon class="w-5 h-5 fill-current" /> waknoti-bot
         </a>
     </div>
 </footer>

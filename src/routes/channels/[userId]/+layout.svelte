@@ -4,7 +4,10 @@
 
     export let data: {
         currentUser: User;
-        profileImageUrls: Record<string, string>;
+    };
+
+    const createAfeeecatvProfileImageUrl = (channelId: string) => {
+        return `https://stimg.afreecatv.com/LOGO/${channelId.slice(0, 2)}/${channelId}/${channelId}.jpg`;
     };
 
 </script>
@@ -18,8 +21,8 @@
                 <a href="/channels/{user.id}/all" class="{data.currentUser.id === user.id ? 'active' : ''} py-3 gap-3" >
                     <div class="avatar">
                         <div class="w-9 md:w-11 rounded-full">
-                            {#if user.twitchLoginName}
-                                <img src={data.profileImageUrls[user.twitchLoginName]} alt={user.twitchLoginName} />
+                            {#if user.afreecatvUserId}
+                                <img src={createAfeeecatvProfileImageUrl(user.afreecatvUserId)} alt={user.afreecatvUserId} />
                             {:else}
                                 <img src="/img/telegram/channel-profiles/{user.id}.png" alt={user.id} />
                             {/if}

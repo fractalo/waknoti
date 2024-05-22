@@ -4,52 +4,29 @@ export const channels: TelegramChannel[] = [
     {
         id: "Qb2sqSmT4C40M2Fl",
         name: "고세구 방송",
-        description: "뱅온",
+        descriptions: ["뱅온 알림"],
         category: "broadcast",
         isPublic: false
     },
     {
         id: "KHCy2YqeDL1jZGY1",
         name: "고세구 방송",
-        description: "뱅온, 방제 변경",
-        category: "broadcast",
-        isPublic: false
-    },
-    {
-        id: "BPdeT-B-rLdkNDE1",
-        name: "고세구 방송",
-        description: "뱅온, 방제 변경, 카테고리 변경 (Just Chatting 제외)",
+        descriptions: ["뱅온, 방제 변경 알림"],
         category: "broadcast",
         isPublic: false
     },
     {
         id: "z7613CX7Z61iMjJl",
         name: "고세구 방송",
-        description: "뱅온, 뱅종, 방제 변경, 카테고리 변경",
+        descriptions: ["뱅온, 뱅종, 방제 변경, 카테고리 변경 알림"],
         category: "broadcast",
         isPublic: false
     },
-
     {
-        id: "9zlOPMvA-Xs5Mjg9",
-        name: "고세구 채팅",
-        description: "이세돌, 우왁굳의 채팅",
-        category: "chat",
+        id: "BPdeT-B-rLdkNDE1",
+        name: "고세구 카페",
+        descriptions: ["왁물원 공지사항, 왁스코드 새 글 알림"],
+        category: "cafe",
         isPublic: false
     },
-    {
-        id: "980h2_0EU0NjMWE1",
-        name: "고세구 채팅",
-        description: "이세돌, 우왁굳, 천양, 고멤의 채팅",
-        category: "chat",
-        isPublic: false
-    },
-
-    {
-        id: "xFBHpZjjx4FjZTBl",
-        name: "고세구 토토",
-        description: "예측 시작, 예측 취소, 예측 결과",
-        category: "predictions",
-        isPublic: false
-    }
 ];

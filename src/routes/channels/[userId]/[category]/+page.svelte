@@ -8,7 +8,7 @@
     export let data: {
         currentUser: User;
         channels: TelegramChannel[];
-        currentCategory: string;
+        currentCategoryTab: string;
         categoryTabs: Tab[];
     };
 
@@ -22,7 +22,6 @@
         return channel.isPublic ? `https://t.me/s/${channel.id}` : null;
     };
 
-
 </script>
 
 
@@ -34,7 +33,7 @@
             <a 
                 href="/channels/{data.currentUser.id}/{tab.id}" 
                 class="tab" 
-                class:tab-active={tab.id === data.currentCategory}
+                class:tab-active={tab.id === data.currentCategoryTab}
             >{tab.name}</a> 
         {/each}
       </div>
@@ -42,8 +41,8 @@
 
 <div class="grid grid-cols-1 gap-2 md:grid-cols-2 lg:gap-3 ">
 {#each data.channels as channel (channel.id)}
-    <div class="card w-full bg-base-200 ">
-        <div class="card-body p-4 sm:p-6">
+    <div class="card w-full bg-base-200">
+        <div class="card-body p-4 sm:p-6 gap-3">
             <div class="card-title">
                 <div class="avatar">
                     <div class="w-8 md:w-9 rounded-full">
@@ -58,9 +57,13 @@
                 </div>
             </div>
 
-            <p class="break-keep font-base">
-                {channel.description} 알림
-            </p>
+            <div class="flex flex-col gap-2 h-full">
+                {#each channel.descriptions as description}
+                    <p class="break-keep font-base">
+                        • {description}
+                    </p>
+                {/each}
+            </div>
             
             <div class="card-actions justify-end">
                 {#if channel.isPublic}
