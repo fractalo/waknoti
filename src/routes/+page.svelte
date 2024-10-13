@@ -7,7 +7,7 @@
 
         <h1 class="text-4xl leading-normal font-bold break-keep brightness-150 contrast-150">우왁굳, 이세계 아이돌 <br> 텔레그램 알림 채널 모음</h1>
 
-        <h3 class="text-2xl font-semibold py-6">아프리카TV / X 스페이스 방송, 왁물원 공지 알림</h3>
+        <h3 class="text-2xl font-semibold py-6">SOOP 방송, 왁물원 공지 알림</h3>
 
 
         <div class="flex gap-2 place-content-center pt-4">
